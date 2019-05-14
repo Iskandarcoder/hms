@@ -10,11 +10,12 @@ class CustomersController extends Controller
 {
     public function list()
     {
-
-      $customers = Customer::all();
+      $activeCustomers = Customer::where('active', 1)->get();
+      $inactiveCustomers = Customer::where('active', 0)->get();
 
       return view('internals.customers',[
-        'customers' => $customers,
+        'activeCustomers' => $activeCustomers,
+        'inactiveCustomers' => $inactiveCustomers,
       ]);
     }
 
@@ -23,7 +24,7 @@ class CustomersController extends Controller
         $data =request()->validate([
           'name'=>'required|min:3',
           'email'=>'required|email',
-          'active'=>'required'
+          'active'=>'required',
 
         ]);
 
