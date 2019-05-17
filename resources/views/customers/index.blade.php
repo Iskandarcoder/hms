@@ -11,7 +11,6 @@
       <p><a href="customers/create">Add New Create</a></p>
     </div>
   </div>
-
   @foreach($customers as $customer)
     <div class="row">
       <div class="col-2">
@@ -21,7 +20,7 @@
         <a href="/customers/{{ $customer->id }}">{{ $customer->name }}</a>
       </div>
       <div class="col-4">{{ $customer->company->name }}</div>
-      <div class="col-2">{{ $customer->active ? 'Active' : 'Inactive' }}</div>
+      <div class="col-2">{{ $customer->active }}</div>
 
       </div>
     @endforeach
