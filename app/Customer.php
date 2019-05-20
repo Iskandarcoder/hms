@@ -18,7 +18,7 @@ class Customer extends Model
 
     public function getActiveAttribute($attribute)
     {
-      return $this->activeOptions()|[$attribute];
+      return $this->activeOptions()[$attribute];
     }
 
     public function scopeActive($query)

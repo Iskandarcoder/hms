@@ -18,9 +18,9 @@ class CustomersController extends Controller
 
     public function create()
     {
-      $customer = new Customer();
       $companies = Company::all();
-
+      $customer = new Customer();
+      
       return view('customers.create', compact('companies', 'customer'));
     }
 
