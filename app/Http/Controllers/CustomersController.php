@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('auth')->except(['index']);
+    }
+
+
     public function index()
     {
       $customers = Customer::all();
@@ -20,7 +26,7 @@ class CustomersController extends Controller
     {
       $companies = Company::all();
       $customer = new Customer();
-      
+
       return view('customers.create', compact('companies', 'customer'));
     }
 
