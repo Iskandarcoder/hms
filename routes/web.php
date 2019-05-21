@@ -30,3 +30,7 @@ Route::resource('customers', 'CustomersController');
 
 Route::get('companies', 'CompanyController@list');
 Route::post('companies', 'CompanyController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
