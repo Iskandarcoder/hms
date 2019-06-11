@@ -15,12 +15,12 @@ class CreateSettingTable extends Migration
     {
         Schema::create('setting', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('orgid', 11)->nullable();
+            $table->bigInteger('orgid')->nullable();
             $table->string('orgname', 255)->nullable();
             $table->string('orgshortname', 255)->nullable();
             $table->string('adminuser', 255)->nullable();
             $table->string('adminpass', 255)->nullable();
-            $table->tinyInteger('typeorganization', 4)->nullable();
+            $table->tinyInteger('typeorganization')->nullable();
 
             $table->timestamps();
         });

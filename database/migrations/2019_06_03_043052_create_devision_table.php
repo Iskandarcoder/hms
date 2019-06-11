@@ -15,9 +15,9 @@ class CreateDevisionTable extends Migration
     {
         Schema::create('devision', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('departament_id', 11)->nullable();
+            $table->bigInteger('departament_id')->nullable();
             $table->string('name', 500)->nullable();
-            $table->tinyInteger('is_valid', 4)->nullable();
+            $table->tinyInteger('is_valid')->nullable();
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ class CreateSPostsTable extends Migration
             $table->string('name_rus', 255)->nullable();
             $table->string('name_uzb', 255)->nullable();
             $table->string('name_lat', 255)->nullable();
-            $table->bigInteger('seq', 11)->nullable();
+            $table->bigInteger('seq')->nullable();
             $table->string('old_id', 255)->nullable();
             $table->string('s_posts_type_id', 255)->nullable();
             $table->string('date_delete', 255)->nullable();

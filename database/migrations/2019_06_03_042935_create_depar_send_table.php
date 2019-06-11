@@ -16,9 +16,9 @@ class CreateDeparSendTable extends Migration
         Schema::create('depar_send', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 225)->nullable();
-            $table->bigInteger('dep_id', 11)->nullable();
-            $table->bigInteger('org_id', 11)->nullable();
-            $table->tinyInteger('is_valid', 4)->nullable();
+            $table->bigInteger('dep_id')->nullable();
+            $table->bigInteger('org_id')->nullable();
+            $table->tinyInteger('is_valid')->nullable();
             $table->timestamps();
         });
     }

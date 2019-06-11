@@ -15,9 +15,9 @@ class CreateTypesTable extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('groupid', 11)->nullable();
+            $table->bigInteger('groupid')->nullable();
             $table->string('doctype', 255)->nullable();
-            $table->tinyInteger('prior', 4)->nullable();
+            $table->tinyInteger('prior')->nullable();
             $table->timestamps();
         });
     }

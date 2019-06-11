@@ -15,10 +15,10 @@ class CreateOrgTable extends Migration
     {
         Schema::create('org', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('dflow_id', 11)->nullebale();
+            $table->bigInteger('dflow_id')->nullebale();
             $table->string('name', 255)->nullebale();
             $table->string('short_name', 255)->nullebale();
-            $table->tinyInteger('type', 4)->nullebale();
+            $table->tinyInteger('type')->nullebale();
             $table->timestamps();
         });
     }

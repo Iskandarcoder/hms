@@ -15,13 +15,13 @@ class CreateStaffingTable extends Migration
     {
         Schema::create('staffing', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('departament_id', 11)->nullable();
-            $table->bigInteger('devision_id', 11)->nullable();
-            $table->bigInteger('personal_id', 11)->nullable();
-            $table->bigInteger('user_id', 11)->nullable();
-            $table->bigInteger('group_id', 11)->nullable();
+            $table->bigInteger('departament_id')->nullable();
+            $table->bigInteger('devision_id')->nullable();
+            $table->bigInteger('personal_id')->nullable();
+            $table->bigInteger('user_id')->nullable();
+            $table->bigInteger('group_id')->nullable();
             $table->string('name', 255)->nullable();
-            $table->tinyInteger('prior', 4)->nullable();
+            $table->tinyInteger('prior')->nullable();
             $table->timestamps();
         });
     }

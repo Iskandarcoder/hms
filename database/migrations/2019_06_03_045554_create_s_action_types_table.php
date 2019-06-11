@@ -18,7 +18,7 @@ class CreateSActionTypesTable extends Migration
             $table->string('name_rus', 255)->nullable();
             $table->string('name_uzb', 255)->nullable();
             $table->string('name_lat', 255)->nullable();
-            $table->tinyInteger('access_level', 2)->nullable();
+            $table->tinyInteger('access_level')->nullable();
             $table->string('url', 255)->nullable();
             $table->string('has_delivery', 2)->nullable();
             $table->timestamps();

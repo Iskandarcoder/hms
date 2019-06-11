@@ -15,14 +15,13 @@ class CreateInternalWorkTable extends Migration
     {
         Schema::create('internal_work', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->dateTime('reg_date', 11)->nullable();
-            $table->bigInteger('doc_id', 11)->nullable();
-            $table->bigInteger('order_id', 11)->nullable();
-            $table->bigInteger('perform_id', 11)->   nullable();
-            $table->bigInteger('author_id', 11)->nullable();
-            $table->bigInteger('dept_id', 11)->nullable();
+            $table->dateTime('reg_date')->nullable();
+            $table->bigInteger('doc_id')->nullable();
+            $table->bigInteger('order_id')->nullable();
+            $table->bigInteger('perform_id')->nullable();
+            $table->bigInteger('author_id')->nullable();
+            $table->bigInteger('dept_id')->nullable();
             $table->string('content', 255)->nullable();
-            $table->timestamps('sysdate')->nullable();
             $table->timestamps();
         });
     }

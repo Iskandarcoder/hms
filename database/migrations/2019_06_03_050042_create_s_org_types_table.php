@@ -16,7 +16,7 @@ class CreateSOrgTypesTable extends Migration
         Schema::create('s_org_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 255)->nullable();
-            $table->bigInteger('seq', 11)->nullable();
+            $table->bigInteger('seq')->nullable();
             $table->timestamps();
         });
     }

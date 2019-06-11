@@ -16,10 +16,10 @@ class CreateDepartamentTable extends Migration
         Schema::create('departament', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 255)->nullable();
-            $table->bigInteger('dep_id', 11)->nullable();
-            $table->bigInteger('org_id', 11)->nullable();
-            $table->tinyInteger('forsend', 4)->nullable();
-            $table->tinyInteger('is_valid', 4)->nullable();
+            $table->bigInteger('dep_id')->nullable();
+            $table->bigInteger('org_id')->nullable();
+            $table->tinyInteger('forsend')->nullable();
+            $table->tinyInteger('is_valid')->nullable();
             $table->timestamps();
         });
     }

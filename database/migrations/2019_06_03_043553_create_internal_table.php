@@ -17,10 +17,10 @@ class CreateInternalTable extends Migration
             $table->bigIncrements('id');
             $table->dateTime('doc_date')->nullable();
             $table->string('reg_num', 255)->nullable();
-            $table->bigInteger('dept_id', 11)->nullable();
-            $table->tinyInteger('doctype_id', 4)->nullable();
-            $table->string('description', 255)->nullable();
-            $table->bigInteger('operator_id', 11)->nullable();
+            $table->bigInteger('dept_id')->nullable();
+            $table->tinyInteger('doctype_id')->nullable();
+            $table->string('description')->nullable();
+            $table->bigInteger('operator_id')->nullable();
             $table->dateTime('reg_date')->nullable();
             $table->timestamps();
         });

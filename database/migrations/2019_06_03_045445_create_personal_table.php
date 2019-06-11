@@ -24,7 +24,7 @@ class CreatePersonalTable extends Migration
             $table->date('date_beg')->nullable();
             $table->date('date_end')->nullable();
             $table->date('birth_date')->nullable();
-            $table->tinyInteger('status', 4)->nullable();
+            $table->tinyInteger('status')->nullable();
             $table->timestamps();
         });
     }

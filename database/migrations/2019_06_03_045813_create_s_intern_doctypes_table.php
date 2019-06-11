@@ -17,7 +17,6 @@ class CreateSInternDoctypesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name_rus', 255)->nullable();
             $table->string('name_uzb', 255)->nullable();
-            $table->timestamps('systime')->nullable();
             $table->timestamps();
         });
     }

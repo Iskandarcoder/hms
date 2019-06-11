@@ -15,12 +15,12 @@ class CreateInternalOrdersTable extends Migration
     {
         Schema::create('internal_orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('doc_id', 11)->nullable();
-            $table->bigInteger('dept_id', 11)->nullable();
+            $table->bigInteger('doc_id')->nullable();
+            $table->bigInteger('dept_id')->nullable();
             $table->string('order_text', 255)->nullable();
             $table->dateTime('create_date')->nullable();
-            $table->tinyInteger('is_read', 4)->nullable();
-            $table->bigInteger('author_id', 11)->nullable();
+            $table->tinyInteger('is_read')->nullable();
+            $table->bigInteger('author_id')->nullable();
             $table->string('author_fio', 255)->nullable();
             $table->timestamps();
         });

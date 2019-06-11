@@ -15,9 +15,9 @@ class CreateInternalFilesTable extends Migration
     {
         Schema::create('internal_files', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('doc_id', 11)->nullable();
+            $table->bigInteger('doc_id')->nullable();
             $table->string('name', 255)->nullable();
-            $table->smallInteger('size_kb', 6)->nullable();
+            $table->smallInteger('size_kb')->nullable();
             $table->string('ext', 255)->nullable();
             $table->dateTime('create_date')->nullable();
             $table->string('fullpath', 255)->nullable();

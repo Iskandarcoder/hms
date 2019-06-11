@@ -15,9 +15,9 @@ class CreateOutgoingOrderTable extends Migration
     {
         Schema::create('outgoing_order', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('germes_id', 11)->nullable();
-            $table->bigInteger('sender_id', 11)->nullable();
-            $table->bigInteger('order_id', 11)->nullable();
+            $table->bigInteger('germes_id')->nullable();
+            $table->bigInteger('sender_id')->nullable();
+            $table->bigInteger('order_id')->nullable();
             $table->string('varchar', 255)->nullable();
             $table->dateTime('sys_date')->nullable();
             $table->string('fiofrom', 255)->nullable();

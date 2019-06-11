@@ -15,9 +15,9 @@ class CreateFilesInTable extends Migration
     {
         Schema::create('files_in', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('doc_id', 11)->nullable();
+            $table->bigInteger('doc_id')->nullable();
             $table->string('name', 500)->nullable();
-            $table->smallInteger('size_kb', 6)->nullable();
+            $table->smallInteger('size_kb')->nullable();
             $table->string('ext', 255)->nullable();
             $table->dateTime('sys_date')->nullable();
             $table->string('fullpath', 255)->nullable();

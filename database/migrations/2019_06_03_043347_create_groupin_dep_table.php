@@ -15,9 +15,9 @@ class CreateGroupinDepTable extends Migration
     {
         Schema::create('groupin_dep', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('groupin_id', 11)->nullable();
-            $table->bigInteger('depid', 11)->nullable();
-            $table->tinyInteger('type', 4)->nullable();
+            $table->bigInteger('groupin_id')->nullable();
+            $table->bigInteger('depid')->nullable();
+            $table->tinyInteger('type')->nullable();
             $table->timestamps();
         });
     }

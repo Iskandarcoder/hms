@@ -16,14 +16,14 @@ class CreateGroupinTable extends Migration
         Schema::create('groupin', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 255)->nullable();
-            $table->tinyInteger('admin', 4)->nullable();
-            $table->tinyInteger('patron', 4)->nullable();
-            $table->tinyInteger('registrator', 4)->nullable();
-            $table->tinyInteger('controllyor', 4)->nullable();
-            $table->tinyInteger('rassilka', 4)->nullable();
-            $table->tinyInteger('el_pochta', 4)->nullable();
-            $table->tinyInteger('sod', 4)->nullable();
-            $table->tinyInteger('postman', 4)->nullable();
+            $table->tinyInteger('admin')->nullable();
+            $table->tinyInteger('patron')->nullable();
+            $table->tinyInteger('registrator')->nullable();
+            $table->tinyInteger('controllyor')->nullable();
+            $table->tinyInteger('rassilka')->nullable();
+            $table->tinyInteger('el_pochta')->nullable();
+            $table->tinyInteger('sod')->nullable();
+            $table->tinyInteger('postman')->nullable();
             $table->timestamps();
         });
     }

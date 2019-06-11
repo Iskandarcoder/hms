@@ -15,8 +15,8 @@ class CreateGroupinDocformsTable extends Migration
     {
         Schema::create('groupin_docforms', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('groupin_id', 11)->nullable();
-            $table->bigInteger('s_doc_forms_id', 11)->nullable();
+            $table->bigInteger('groupin_id')->nullable();
+            $table->bigInteger('s_doc_forms_id')->nullable();
             $table->timestamps();
         });
     }

@@ -15,10 +15,10 @@ class CreateInternalDeptsTable extends Migration
     {
         Schema::create('internal_depts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('doc_id', 11)->nullable();
-            $table->bigInteger('dept_id', 11)->nullable();
+            $table->bigInteger('doc_id')->nullable();
+            $table->bigInteger('dept_id')->nullable();
             $table->dateTime('reg_date')->nullable();
-            $table->tinyInteger('status', 1)->nullable();
+            $table->tinyInteger('status')->nullable();
             $table->dateTime('sent_dt')->nullable();
             $table->timestamps();
         });

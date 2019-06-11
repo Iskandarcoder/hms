@@ -15,14 +15,14 @@ class CreateOrdersSendTable extends Migration
     {
         Schema::create('orders_send', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('parrent_id', 11)->nullable();
-            $table->bigInteger('sender_id', 11)->nullable();
-            $table->bigInteger('germes_id', 11)->nullable();
+            $table->bigInteger('parrent_id')->nullable();
+            $table->bigInteger('sender_id')->nullable();
+            $table->bigInteger('germes_id')->nullable();
             $table->string('oreder_txt', 255)->nullable();
             $table->dateTime('sys_date')->nullable();
             $table->string('fio_from', 255)->nullable();
             $table->string('fio_whom', 255)->nullable();
-            $table->tinyInteger('status_ord', 4)->nullable();
+            $table->tinyInteger('status_ord')->nullable();
 
             $table->timestamps();
         });

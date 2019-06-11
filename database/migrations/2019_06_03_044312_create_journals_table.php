@@ -17,7 +17,7 @@ class CreateJournalsTable extends Migration
             $table->bigIncrements('id');
             $table->string('prefix', 2)->nullable();
             $table->string('journal_name', 255)->nullable();
-            $table->bigInteger('last_number', 11)->nullable();
+            $table->bigInteger('last_number')->nullable();
             $table->timestamps();
         });
     }

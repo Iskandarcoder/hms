@@ -15,7 +15,7 @@ class CreateTashkilotTable extends Migration
     {
         Schema::create('tashkilot', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('org_type_id', 11)->nullable();
+            $table->bigInteger('org_type_id')->nullable();
             $table->string('name', 255)->nullable();
             $table->string('short_name', 255)->nullable();
             $table->string('city', 255)->nullable();
@@ -25,8 +25,8 @@ class CreateTashkilotTable extends Migration
             $table->string('fax', 255)->nullable();
             $table->string('email', 255)->nullable();
             $table->string('website', 255)->nullable();
-            $table->bigInteger('journal_id', 11)->nullable();
-            $table->bigInteger('type', 11)->nullable();
+            $table->bigInteger('journal_id')->nullable();
+            $table->bigInteger('type')->nullable();
             $table->timestamps();
         });
     }

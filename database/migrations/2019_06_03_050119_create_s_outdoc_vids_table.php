@@ -18,8 +18,8 @@ class CreateSOutdocVidsTable extends Migration
             $table->string('name_rus', 255)->nullable();
             $table->string('name_uzb', 255)->nullable();
             $table->string('name_lat', 255)->nullable();
-            $table->bigInteger('seq', 4)->nullable();
-            $table->bigInteger('old_id', 10)->nullable();
+            $table->bigInteger('seq')->nullable();
+            $table->bigInteger('old_id')->nullable();
             $table->timestamps();
         });
     }

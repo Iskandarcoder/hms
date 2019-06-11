@@ -16,8 +16,8 @@ class CreateTypeCategoryTable extends Migration
         Schema::create('type_category', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('group_name', 255)->nullable();
-            $table->tinyInteger('prior', 4)->nullable();
-            $table->tinyInteger('is_valid', 4)->nullable();
+            $table->tinyInteger('prior')->nullable();
+            $table->tinyInteger('is_valid')->nullable();
             $table->timestamps();
         });
     }

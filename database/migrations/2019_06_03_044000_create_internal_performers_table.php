@@ -16,12 +16,12 @@ class CreateInternalPerformersTable extends Migration
         Schema::create('internal_performers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->dateTime('reg_date')->nullable();
-            $table->bigInteger('doc_id', 11)->nullable();
-            $table->bigInteger('order_id', 11)->nullable();
-            $table->bigInteger('recipient_id', 11)->nullable();
-            $table->smallInteger('status', 6)->nullable();
+            $table->bigInteger('doc_id')->nullable();
+            $table->bigInteger('order_id')->nullable();
+            $table->bigInteger('recipient_id')->nullable();
+            $table->smallInteger('status')->nullable();
             $table->dateTime('status_date')->nullable();
-            $table->bigInteger('parent_id', 11)->nullable();
+            $table->bigInteger('parent_id')->nullable();
             $table->timestamps();
         });
     }

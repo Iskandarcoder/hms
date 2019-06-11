@@ -15,13 +15,13 @@ class CreateOutgoingOrgsTable extends Migration
     {
         Schema::create('outgoing_orgs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('outgoing_id', 11)->nullable();
-            $table->bigInteger('org_id', 11)->nullable();
+            $table->bigInteger('outgoing_id')->nullable();
+            $table->bigInteger('org_id')->nullable();
             $table->dateTime('date_create')->nullable();
             $table->string('on_control', 255)->nullable();
             $table->dateTime('deadline')->nullable();
             $table->dateTime('sent_time')->nullable();
-            $table->bigInteger('status', 1)->nullable();
+            $table->bigInteger('status')->nullable();
             $table->dateTime('recv_time')->nullable();
             $table->timestamps();
         });

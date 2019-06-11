@@ -16,8 +16,8 @@ class CreateSKimgaTable extends Migration
         Schema::create('s_kimga', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nomi', 255)->nullable();
-            $table->bigInteger('prior', 10)->nullable();
-            $table->bigInteger('tash_kodi', 10)->nullable();
+            $table->bigInteger('prior')->nullable();
+            $table->bigInteger('tash_kodi')->nullable();
             $table->timestamps();
         });
     }

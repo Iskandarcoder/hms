@@ -15,8 +15,8 @@ class CreateGroupinDocvidsTable extends Migration
     {
         Schema::create('groupin_docvids', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('groupin_id', 4)->nullable();
-            $table->bigInteger('s_doc_vids_id', 4)->nullable();
+            $table->bigInteger('groupin_id')->nullable();
+            $table->bigInteger('s_doc_vids_id')->nullable();
             $table->timestamps();
         });
     }

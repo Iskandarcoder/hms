@@ -15,8 +15,8 @@ class CreateInternalUsersTable extends Migration
     {
         Schema::create('internal_users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('doc_id', 11)->nullable();
-            $table->bigInteger('staffing_id', 11)->nullable();
+            $table->bigInteger('doc_id')->nullable();
+            $table->bigInteger('staffing_id')->nullable();
             $table->string('staffing_fio', 255)->nullable();
             $table->dateTime('reg_date')->nullable();
             $table->dateTime('read_date')->nullable();
