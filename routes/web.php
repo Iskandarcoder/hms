@@ -27,6 +27,7 @@ Route::view('about', 'about');
 // Route::delete('customers/{customer}', 'CustomersController@destroy');
 
 Route::resource('customers', 'CustomersController');
+Route::resource('incoming', 'IncomingController');
 
 Route::get('companies', 'CompanyController@list');
 Route::post('companies', 'CompanyController@store');

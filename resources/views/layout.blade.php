@@ -11,6 +11,7 @@
     <body>
       <div class="container">
         @include('nav')
+        @include('sidebar')
 
         @if(session()->has('message'))
           <div class="alert alert-success" role="alert">

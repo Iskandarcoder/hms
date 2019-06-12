@@ -7,26 +7,33 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Hermes+') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Scripts & CSS -->
+    @extends('layouts.assets')
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
-<body>
-    <div id="app">
-        @include('nav')
-        <main class="py-4">
-            <div class="container">
-              @yield('content')
+<body class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo page-container-bg-solid">
+      @include('nav')
+      <div class="page-container">
+      @include('sidebar')
+            <div class="page-content-wrapper">
+              <div class="page-content">
+                @yield('content')
+              </div>
             </div>
-        </main>
-    </div>
+          </div>
+      <!-- END CONTAINER -->
+      <!-- BEGIN FOOTER -->
+      <div class="page-footer">
+      	<div class="page-footer-inner">
+      		 2014 &copy; Metronic by keenthemes.
+      	</div>
+      	<div class="scroll-to-top">
+      		<i class="icon-arrow-up"></i>
+      	</div>
+      </div>
 </body>
 </html>
